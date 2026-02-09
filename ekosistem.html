@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>React - React Websitesi</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
+            <div class="row gx-0 align-items-center">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="contact.html" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Konum</a>
+                        <a href="contact.html" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                        <a href="contact.html" class="text-muted small me-0"><i class="fas fa-envelope text-primary me-2"></i>React@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Register</small></a>
+                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Login</small></a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fa fa-home text-primary me-2"></i> Kontrol Paneli</small></a>
+                            <div class="dropdown-menu rounded">
+                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> Profilim </a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Gelen Kutusu</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Hesap Ayarları</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Oturumu Kapat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="text-primary"><img src="img/logo_dark.svg" alt="Logo">React</h1>                
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Ana Sayfa</a>
+                        <a href="about.html" class="nav-item nav-link">Hakkında</a>
+                        <a href="service.html" class="nav-item nav-link">Dersler</a>
+                        <a href="blog.html" class="nav-item nav-link ">Blog</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Sayfalar</span>
+                            </a>
+                            <div class="dropdown-menu m-0">
+                                <a href="feature.html" class="dropdown-item">Özelliklerimiz</a>
+                                <a href="team.html" class="dropdown-item">Ekibimiz</a>
+                                <a href="testimonial.html" class="dropdown-item">Referans</a>
+                                <a href="offer.html" class="dropdown-item">API</a>
+                                <a href="FAQ.html" class="dropdown-item">SSS</a>
+                                <a href="404.html" class="dropdown-item">Login</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Bize Ulaşın</a>
+                    </div>
+                    <a href="404.html" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Giriş Yap</a>
+                </div>
+            </nav>
+
+            <!-- Header Start -->
+            <div class="container-fluid bg-breadcrumb">
+                <div class="container text-center py-5" style="max-width: 900px;">
+                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Geniş Ekosistem ve Topluluk</h4>
+                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                        <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                        <li class="breadcrumb-item"><a href="#">Sayfalar</a></li>
+                        <li class="breadcrumb-item  text-primary">Geniş Ekosistem ve Topluluk</li>
+                    </ol>    
+                </div>
+            </div>
+            <!-- Header End -->
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+
+
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-12">
+                        <h2 class="mb-4">React'ın Geniş Ekosistemi ve Topluluğu</h2>
+        
+                        <h4 class="mb-3">React Ekosistemi Nedir?</h4>
+                        <p>React ekosistemi, React kütüphanesi etrafında oluşmuş, çeşitli araçlar, kütüphaneler, eklentiler ve topluluk tarafından desteklenen bir ekosistemdir. Bu ekosistem, React geliştiricilerine projelerini daha hızlı ve verimli bir şekilde geliştirmeleri için geniş bir yelpazede kaynaklar sunar.</p>
+        
+                        <h4 class="mb-3">React Ekosisteminin Ana Bileşenleri</h4>
+                        <ul>
+                            <li><strong>State Yönetimi:</strong> Redux, MobX, Recoil gibi kütüphaneler, React uygulamalarında state yönetimi için kullanılır.</li>
+                            <li><strong>Router:</strong> React Router, React uygulamalarında sayfa yönlendirmesi yapmak için kullanılan popüler bir kütüphanedir.</li>
+                            <li><strong>Form Yönetimi:</strong> Formik, React Hook Form gibi kütüphaneler, React uygulamalarında form yönetimi ve doğrulaması için kullanılır.</li>
+                            <li><strong>API İstemcileri:</strong> Axios, Fetch gibi kütüphaneler, React uygulamalarında API talepleri yapmak için kullanılır.</li>
+                            <li><strong>Stil Yönetimi:</strong> Styled-components, Emotion, CSS Modules gibi kütüphaneler, React bileşenlerinin stil yönetimi için kullanılır.</li>
+                            <li><strong>Test Araçları:</strong> Jest, React Testing Library, Cypress gibi araçlar, React uygulamalarının test edilmesi için kullanılır.</li>
+                        </ul>
+        
+                        <h4 class="mb-3">React State Yönetimi</h4>
+                        <p>React uygulamalarında state yönetimi, uygulamanın durumunu ve veri akışını yönetmek için kritik bir rol oynar. İşte popüler state yönetimi kütüphaneleri:</p>
+                        
+                        <h5>Redux</h5>
+                        <p>Redux, React uygulamalarında merkezi bir state yönetimi sağlar. Redux, state'i tek bir yerden yöneterek uygulamanın tahmin edilebilir ve yönetilebilir olmasını sağlar.</p>
+                        <p>Örnek:</p>
+                        <pre><code>&lt;script&gt;
+        import { createStore } from 'redux';
+        import { Provider, useDispatch, useSelector } from 'react-redux';
+        
+        // Redux işlemleri
+        const initialState = { count: 0 };
+        
+        const reducer = (state = initialState, action) => {
+            switch (action.type) {
+                case 'INCREMENT':
+                    return { ...state, count: state.count + 1 };
+                default:
+                    return state;
+            }
+        };
+        
+        const store = createStore(reducer);
+        
+        function Sayaç() {
+            const count = useSelector((state) => state.count);
+            const dispatch = useDispatch();
+        
+            return (
+                &lt;div&gt;
+                    &lt;p&gt;Butona {count} defa tıkladınız.&lt;/p&gt;
+                    &lt;button onClick={() => dispatch({ type: 'INCREMENT' })}&gt;Artır&lt;/button&gt;
+                &lt;/div&gt;
+            );
+        }
+        
+        function App() {
+            return (
+                &lt;Provider store={store}&gt;
+                    &lt;Sayaç /&gt;
+                &lt;/Provider&gt;
+            );
+        }
+        
+        ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
+        &lt;/script&gt;
+                        </code></pre>
+        
+                        <h5>MobX</h5>
+                        <p>MobX, reaktif programlama prensiplerine dayanan bir state yönetimi kütüphanesidir. MobX, state değişikliklerini otomatik olarak takip eder ve bileşenleri yeniden render eder.</p>
+                        <p>Örnek:</p>
+                        <pre><code>&lt;script&gt;
+        import { observable } from 'mobx';
+        import { observer } from 'mobx-react';
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        
+        // MobX store
+        const store = observable({
+            count: 0,
+            increment() {
+                this.count++;
+            },
+        });
+        
+        const Sayaç = observer(() => (
+            &lt;div&gt;
+                &lt;p&gt;Butona {store.count} defa tıkladınız.&lt;/p&gt;
+                &lt;button onClick={() => store.increment()}&gt;Artır&lt;/button&gt;
+            &lt;/div&gt;
+        ));
+        
+        ReactDOM.render(&lt;Sayaç /&gt;, document.getElementById('root'));
+        &lt;/script&gt;
+                        </code></pre>
+        
+                        <h5>Recoil</h5>
+                        <p>Recoil, React uygulamalarında state yönetimini basit ve performanslı hale getiren bir kütüphanedir. Recoil, atomlar ve selector'lar ile state'i yönetir.</p>
+                        <p>Örnek:</p>
+                        <pre><code>&lt;script&gt;
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import { atom, selector, useRecoilState, useRecoilValue, RecoilRoot } from 'recoil';
+        
+        // Recoil state
+        const countState = atom({
+            key: 'countState',
+            default: 0,
+        });
+        
+        const doubleCountState = selector({
+            key: 'doubleCountState',
+            get: ({ get }) => {
+                const count = get(countState);
+                return count * 2;
+            },
+        });
+        
+        function Sayaç() {
+            const [count, setCount] = useRecoilState(countState);
+            const doubleCount = useRecoilValue(doubleCountState);
+        
+            return (
+                &lt;div&gt;
+                    &lt;p&gt;Butona {count} defa tıkladınız.&lt;/p&gt;
+                    &lt;p&gt;İki Katı: {doubleCount}&lt;/p&gt;
+                    &lt;button onClick={() => setCount(count + 1)}&gt;Artır&lt;/button&gt;
+                &lt;/div&gt;
+            );
+        }
+        
+        function App() {
+            return (
+                &lt;RecoilRoot&gt;
+                    &lt;Sayaç /&gt;
+                &lt;/RecoilRoot&gt;
+            );
+        }
+        
+        ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
+        &lt;/script&gt;
+                        </code></pre>
+        
+                        <h4 class="mb-3">React Router</h4>
+                        <p>React Router, React uygulamalarında sayfa yönlendirmesi yapmak için kullanılan popüler bir kütüphanedir. React Router, uygulamanızda farklı sayfalar ve rotalar tanımlayabilirsiniz.</p>
+                        <p>Örnek:</p>
+                        <pre><code>&lt;script&gt;
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+        
+        const Anasayfa = () => &lt;h1&gt;Anasayfa&lt;/h1&gt;;
+        const Hakkimizda = () => &lt;h1&gt;Hakkımızda&lt;/h1&gt;;
+        const Iletisim = () => &lt;h1&gt;İletişim&lt;/h1&gt;;
+        
+        function App() {
+            return (
+                &lt;Router&gt;
+                    &lt;Switch&gt;
+                        &lt;Route exact path="/" component={Anasayfa} /&gt;
+                        &lt;Route path="/hakkimizda" component={Hakkimizda} /&gt;
+                        &lt;Route path="/iletisim" component={Iletisim} /&gt;
+                    &lt;/Switch&gt;
+                &lt;/Router&gt;
+            );
+        }
+        
+        ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
+        &lt;/script&gt;
+                        </code></pre>
+        
+                        <h4 class="mb-3">React ile Form Yönetimi</h4>
+                        <p>React uygulamalarında form yönetimi ve doğrulaması yapmak için popüler kütüphaneler arasında Formik ve React Hook Form bulunur.</p>
+        
+                        <h5>Formik</h5>
+                        <p>Formik, React uygulamalarında form yönetimi ve doğrulaması için kullanılan popüler bir kütüphanedir. Formik, formların durumunu ve doğrulamasını yönetmeyi kolaylaştırır.</p>
+                        <p>Örnek:</p>
+                        <pre><code>&lt;script&gt;
+             
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import { Formik, Form, Field, ErrorMessage } from 'formik';
+        
+        function KayıtFormu() {
+            return (
+                &lt;Formik
+                    initialValues={{ isim: '', email: '' }}
+                    validate={values => {
+                        const errors = {};
+                        if (!values.isim) {
+                            errors.isim = 'İsim gerekli';
+                        }
+                        if (!values.email) {
+                            errors.email = 'Email gerekli';
+                        } else if (
+                            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                        ) {
+                            errors.email = 'Geçersiz email adresi';
+                        }
+                        return errors;
+                    }}
+                    onSubmit={(values, { setSubmitting }) => {
+                        setTimeout(() => {
+                            alert(JSON.stringify(values, null, 2));
+                            setSubmitting(false);
+                        }, 400);
+                    }}
+                &gt;
+                    {({ isSubmitting }) => (
+                        &lt;Form&gt;
+                            &lt;div&gt;
+                                &lt;Field type="text" name="isim" /&gt;
+                                &lt;ErrorMessage name="isim" component="div" /&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;Field type="email" name="email" /&gt;
+                                &lt;ErrorMessage name="email" component="div" /&gt;
+                            &lt;/div&gt;
+                            &lt;button type="submit" disabled={isSubmitting}&gt;
+                                Gönder
+                            &lt;/button&gt;
+                        &lt;/Form&gt;
+                    )}
+                &lt;/Formik&gt;
+            );
+        }
+        
+        ReactDOM.render(&lt;KayıtFormu /&gt;, document.getElementById('root'));
+        &lt;/script&gt;
+        </code></pre>
+        
+        <h5>React Hook Form</h5>
+        <p>React Hook Form, React uygulamalarında form yönetimini ve doğrulamasını kolaylaştıran başka bir popüler kütüphanedir. React Hook Form, minimum kod yazımı ile formların yönetilmesini sağlar.</p>
+        <p>Örnek:</p>
+        <pre><code>&lt;script&gt;
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import { useForm } from 'react-hook-form';
+        
+        function KayıtFormu() {
+            const { register, handleSubmit, watch, formState: { errors } } = useForm();
+            const onSubmit = data => {
+                alert(JSON.stringify(data, null, 2));
+            };
+        
+            return (
+                &lt;form onSubmit={handleSubmit(onSubmit)}&gt;
+                    &lt;div&gt;
+                        &lt;input {...register("isim", { required: "İsim gerekli" })} /&gt;
+                        &lt;p&gt;{errors.isim?.message}&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;input {...register("email", { 
+                            required: "Email gerekli", 
+                            pattern: {
+                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                message: "Geçersiz email adresi"
+                            } 
+                        })} /&gt;
+                        &lt;p&gt;{errors.email?.message}&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;button type="submit"&gt;Gönder&lt;/button&gt;
+                &lt;/form&gt;
+            );
+        }
+        
+        ReactDOM.render(&lt;KayıtFormu /&gt;, document.getElementById('root'));
+        &lt;/script&gt;
+        </code></pre>
+        
+        <h4 class="mb-3">React API İstemcileri</h4>
+        <p>React uygulamalarında API talepleri yapmak için popüler kütüphaneler arasında Axios ve Fetch bulunur.</p>
+        
+        <h5>Axios</h5>
+        <p>Axios, React uygulamalarında API talepleri yapmak için kullanılan popüler bir kütüphanedir. Axios, asenkron talepleri yönetmek ve veri çekmek için kullanılır.</p>
+        <p>Örnek:</p>
+        <pre><code>&lt;script&gt;
+        import React, { useState, useEffect } from 'react';
+        import ReactDOM from 'react-dom';
+        import axios from 'axios';
+        
+        function VeriGetir() {
+            const [veri, setVeri] = useState([]);
+        
+            useEffect(() => {
+                axios.get('https://api.example.com/data')
+                    .then(response => setVeri(response.data))
+                    .catch(error => console.error('Veri çekme hatası:', error));
+            }, []);
+        
+            return (
+                &lt;div&gt;
+                    &lt;h1&gt;API'den Gelen Veriler&lt;/h1&gt;
+                    &lt;ul&gt;
+                        {veri.map((item, index) => (
+                            &lt;li key={index}&gt;{item}&lt;/li&gt;
+                        ))}
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            );
+        }
+        
+        ReactDOM.render(&lt;VeriGetir /&gt;, document.getElementById('root'));
+        &lt;/script&gt;
+        </code></pre>
+        
+        <h5>Fetch API</h5>
+        <p>Fetch API, modern tarayıcılarda yerleşik olarak bulunan ve asenkron veri talepleri yapmak için kullanılan bir API'dir. Fetch API, veri çekmek ve göndermek için yaygın olarak kullanılır.</p>
+        <p>Örnek:</p>
+        <pre><code>&lt;script&gt;
+        import React, { useState, useEffect } from 'react';
+        import ReactDOM from 'react-dom';
+        
+        function VeriGetir() {
+            const [veri, setVeri] = useState([]);
+        
+            useEffect(() => {
+                fetch('https://api.example.com/data')
+                    .then(response => response.json())
+                    .then(data => setVeri(data))
+                    .catch(error => console.error('Veri çekme hatası:', error));
+            }, []);
+        
+            return (
+                &lt;div&gt;
+                    &lt;h1&gt;API'den Gelen Veriler&lt;/h1&gt;
+                    &lt;ul&gt;
+                        {veri.map((item, index) => (
+                            &lt;li key={index}&gt;{item}&lt;/li&gt;
+                        ))}
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            );
+        }
+        
+        ReactDOM.render(&lt;VeriGetir /&gt;, document.getElementById('root'));
+        &lt;/script&gt;
+        </code></pre>
+        
+        <h4 class="mb-3">React ile Stil Yönetimi</h4>
+        <p>React uygulamalarında stil yönetimi için çeşitli yöntemler ve kütüphaneler kullanılabilir. İşte bazı popüler stil yönetimi seçenekleri:</p>
+        
+        <h5>Styled-components</h5>
+        <p>Styled-components, CSS-in-JS yaklaşımını kullanarak stil bileşenleri oluşturmaya olanak tanıyan bir kütüphanedir. Styled-components ile stil yönetimini bileşen bazlı yapabilirsiniz.</p>
+        <p>Örnek:</p>
+        <pre><code>&lt;script&gt;
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import styled from 'styled-components';
+        
+        const Button = styled.button`
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        `;
+        
+        function App() {
+            return &lt;Button&gt;Tıkla&lt;/Button&gt;;
+        }
+        
+        ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
+        &lt;/script&gt;
+        </code></pre>
+        
+        <h5>CSS Modules</h5>
+        <p>CSS Modules, her bileşene özgü CSS sınıfları tanımlamaya ve stil yönetimini modüler hale getirmeye olanak tanır. CSS Modules ile stil çakışmalarını önleyebilirsiniz.</p>
+        <p>Örnek:</p>
+        <pre><code>&lt;script&gt;
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import styles from './Button.module.css';
+        
+        function Button() {
+            return &lt;button className={styles.button}&gt;Tıkla&lt;/button&gt;;
+        }
+        
+        function App() {
+            return &lt;Button /&gt;;
+        }
+        
+        ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
+        &lt;/script&gt;
+        </code></pre>
+        
+        <h4 class="mb-3">React Topluluğu</h4>
+        <p>React, geniş ve aktif bir topluluğa sahiptir. React topluluğu, geliştiricilerin bilgi paylaşımında bulunduğu, sorunları çözdüğü ve yeni fikirler geliştirdiği bir platformdur. İşte React topluluğu ile etkileşimde bulunabileceğiniz bazı kaynaklar:</p>
+        
+        <ul>
+            <li><strong>React Resmi Belgeleri:</strong> <a href="https://reactjs.org/docs/getting-started.html" target="_blank">React Resmi Belgeleri</a>, React hakkında kapsamlı bilgi ve örnekler sunar.</li>
+            <li><strong>Stack Overflow:</strong> <a href="https://stackoverflow.com/questions/tagged/reactjs" target="_blank">Stack Overflow</a>, React ile ilgili sorularınızı sorabileceğiniz ve topluluktan yanıtlar alabileceğiniz bir platformdur.</li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/facebook/react" target="_blank">React GitHub Deposu</a>, React'ın kaynak kodunu inceleyebileceğiniz ve katkıda bulunabileceğiniz bir platformdur.</li>
+            <li><strong>Discord ve Slack Grupları:</strong> React geliştiricileri ile canlı sohbet edebileceğiniz Discord ve Slack grupları bulunmaktadır.</li>
+            <li><strong>React Konferansları ve Etkinlikleri:</strong> React Europe, React Conf gibi uluslararası konferanslar ve yerel meetuplar, React geliştiricileri ile tanışmak ve bilgi paylaşımında bulunmak için harika fırsatlar sunar.</li>
+        </ul>
+        
+        <h4 class="mb-3">Özet</h4>
+        <p>React'ın geniş ekosistemi ve topluluğu, React geliştiricilerine projelerini daha hızlı ve verimli bir şekilde geliştirmeleri için geniş bir yelpazede kaynaklar sunar. State yönetimi, router, form yönetimi, API istemcileri ve stil yönetimi gibi çeşitli araçlar ve kütüphaneler, React ekosisteminin önemli bileşenleridir. Ayrıca, geniş ve aktif React topluluğu, geliştiricilerin bilgi paylaşımında bulunduğu ve yeni fikirler geliştirdiği bir platform sunar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+
+
+
+
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item">
+                            
+                                <a href="" class="navbar-brand p-0">
+                                    <h4 class="text-white"><img src="img/logo_dark.svg" style="width: 20%; height: auto;" alt="Logo">React</h4>
+                                </a>
+                                <!-- <img src="img/logo.png" alt="Logo"> -->
+                            
+                            <p class="mb-4">Uygulamalarımızı İndirin...</p>
+                            <div class="d-flex">
+                                <a href="https://www.apple.com/app-store/" class="bg-primary d-flex rounded align-items-center py-2 px-3 me-2">
+                                    <i class="fas fa-apple-alt text-white"></i>
+                                    <div class="ms-3">
+                                        <small class="text-white">Burdan İndir</small>
+                                        <h6 class="text-white">App Store</h6>
+                                    </div>
+                                </a>
+                                <a href="https://play.google.com/store/apps" class="bg-dark d-flex rounded align-items-center py-2 px-3 ms-2">
+                                    <i class="fas fa-play text-primary"></i>
+                                    <div class="ms-3">
+                                        <small class="text-white">Burdan İndir</small>
+                                        <h6 class="text-white">Google Play</h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-2">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Hızlı Bağlatılar</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Ana Sayfa</a>
+                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> Hakkında</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Dersler</a>
+                            <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Bize Ulaşın</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Destek</h4>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Gizlilik Politikası</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Şartlar & Koşullar</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Sorumluluklar</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Destek</a>
+                            <a href="FAQ.html"><i class="fas fa-angle-right me-2"></i> SSS</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Yardım</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">İletişim Bilgileri</h4>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                <p class="text-white mb-0">123 Sokak Ankara.TÜRKİYE</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-envelope text-primary me-3"></i>
+                                <p class="text-white mb-0">bilgi@gmail.com</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-phone-alt text-primary me-3"></i>
+                                <p class="text-white mb-0">(+012) 3456 7890</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <i class="fab fa-firefox-browser text-primary me-3"></i>
+                                <p class="text-white mb-0">reactım@ex.com</p>
+                            </div>
+                            <div class="d-flex">
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-twitter text-white"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-instagram text-white"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in text-white"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

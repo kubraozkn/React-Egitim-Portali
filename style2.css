@@ -1,0 +1,74 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1abc9c, #3498db);
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container-fluid {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+#login-container {
+    position: relative;
+}
+.form-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.sign-in-container {
+    opacity: 0;
+    visibility: hidden;
+}
+.sign-in-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+.form-container.sign-up-container {
+    opacity: 1;
+    visibility: visible;
+}
+.form-container.sign-up-container.active {
+    opacity: 0;
+    visibility: hidden;
+}
+.form-container h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    text-align: center;
+    color: #000;
+}
+.form-container input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+}
+.form-container input::placeholder {
+    color: #ccc;
+}
+.form-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.form-container button:hover {
+    background-color: #c0392b;
+}
