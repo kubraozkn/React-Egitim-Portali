@@ -1,0 +1,18 @@
+# React Öğretici Bilgi Portalı
+
+React.js temel kavramlarının (Bileşenler, State, Props) öğretilmesi amacıyla geliştirilmiş web tabanlı eğitim platformu.
+
+## Teknik Özellikler
+- **Kategori:** Eğitim Portalı
+- **Teknolojiler:** HTML5, CSS3, JavaScript, Bootstrap 5
+- **Yayınlama:** FTP / Canlı Sunucu Entegrasyonu
+
+---
+
+## Lisans ve Atıf Bilgileri
+Bu proje geliştirilirken aşağıda bilgileri yer alan arayüz şablonu kullanılmış ve içerik/mimari tarafımca özelleştirilmiştir.
+
+- **Template Name:** Stocker - Stock Market Website Template
+- **Template Link:** https://htmlcodex.com/stock-market-website-template
+- **Template Author:** HTML Codex
+- **Author Website:** https://htmlcodex.com
